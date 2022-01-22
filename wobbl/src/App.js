@@ -10,21 +10,7 @@ const ENDPOINT = "http://localhost:5050";
 
 function App() {
   const[response, setResponse] = useState("");
-  const socket = socketIOClient(ENDPOINT);
-
-  useEffect(() => {
-    socket.on("connectionMessage", data => {
-      setResponse(data);
-      console.log(data);
-    });
-    socket.on("newMessage", data =>{
-      console.log(data);
-    })
-
-    socket.send('hello');
-  }, []);
- 
-
+  
   return (
     <BrowserRouter>
       <div className="App">
@@ -32,7 +18,7 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/zoom/:id" element={<ZoomRoom/>} />
+            <Route path="/zoom/:roomId" element={<ZoomRoom/>} />
           </Routes>
         </div>
       </div>

@@ -31,14 +31,21 @@ app.use(bp.json());
 
 //routes
 const messageRouter = require("./routes/message");
+const roomRouter = require("./routes/room");
 //map routes
 app.use("/api/message", messageRouter);
+app.use("/api/room", roomRouter);
 
-
-io.on('connection', (socket) => {
+io.on('connection', socket => {
     console.log('a user connected');
-    socket.emit('connectionMessage',"Successfully connected to server");
+    socket.on('joinRoom', ({ roomId }) => {
+    socket.join(roomId);
+    console.log("user joined room with id"+roomId);
+    socket.emit("newMessage",`THIS IS FOR THIS SPECIFIC ROOM WITH ID:${roomId}`)
+    io.to(roomId).emit("newMessage","New user joined!");
+    });
 });
+
 
 app.get('/api/test', function (req, res) {
     res.send('This is a test API!');
