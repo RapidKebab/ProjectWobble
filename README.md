@@ -1,5 +1,5 @@
 # ProjectWobble
-McHacks 9 project done with Pierre Masselot
+McHacks 9 project done by Ogulcan Kaya and Pierre Masselot in 36 hours between the 21st and 23rd of January
 
 Requirements to run the project: 
 * Docker(Docker desktop on Windows/Mac and docker-compose+docker on Linux)
