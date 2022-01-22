@@ -25,8 +25,8 @@ function ZoomRoom() {
       <div className="id">Zoom room id: {roomId}</div>
       <div className="messaging">
       <Messages chat={chat} />
-      <input type="text" />
-      <button>Send</button>
+      <input className="messagebox" type="text" />
+      <button className="messagesender">Send</button>
       </div>
     </>
   );
