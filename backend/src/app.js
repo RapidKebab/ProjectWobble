@@ -1,10 +1,23 @@
 var express = require('express');
 var app = express();
+var cors = require('cors');
 const http = require('http');
 const server = http.createServer(app);
-const { Server } = require("socket.io");
-const io = new Server(server);
+const io = require("socket.io")(server, {
+    cors: {
+      origin: "http://localhost:3000",
+      methods: ["GET", "POST"]
+    }
+  });
 const port = 5050;
+
+var corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200 // For legacy browser support
+}
+
+app.use(cors(corsOptions));
+
 
 io.on('connection', (socket) => {
     console.log('a user connected');
