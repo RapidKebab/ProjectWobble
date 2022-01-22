@@ -5,8 +5,9 @@ import { useParams } from "react-router";
 import "./ZoomRoom.css";
 import { socket } from "../../service/socket";
 
-function Ex() {
+function ZoomRoom() {
   let { roomId } = useParams();
+
   useEffect(() => {
     socket.emit("joinRoom", { roomId });
     socket.on("newMessage", (data) => {
@@ -29,4 +30,4 @@ function Ex() {
   );
 }
 
-export default Ex;
+export default ZoomRoom;
