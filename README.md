@@ -11,5 +11,6 @@ docker-compose up
 ```
  if any dependencies have changed, you will need to build again with the command:
  ```
-docker-compose up --build
+docker-compose build
+docker-compose up
 ```
