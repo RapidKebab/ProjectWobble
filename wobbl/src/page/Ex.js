@@ -1,7 +1,17 @@
 import React, { Component } from "react";
+import React, { useState } from "react";
+import Messages from "../components/Messages";
 
 export default class Ex extends Component {
+  
   render() {
-    return (<div>Hello this is the example page for the /ex route</div>);
+    const [chat,setChat] = useState(['sample text','sample text 2'])
+    return (
+      <>
+        <Messages chat = {chat}/>
+        <input type="text"/>
+        <button>Send</button>
+      </>
+    );
   }
 }
