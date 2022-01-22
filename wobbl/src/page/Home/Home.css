@@ -4,8 +4,8 @@
     margin-top: auto;
     margin-bottom: auto;
     width: 50%;
-    height: 50%;
-    border: 2px solid #ffe865;
+    height: 25%;
+
 }
 .inputText{
     font-size:28pt;
@@ -13,8 +13,12 @@
 .input{
     border: 2px solid #ffe865;
     border-right: 0px;
+    width:50%;
+    height:50px
 }
 .joinButton{
     border: 2px solid #ffe865;
     border-left: 0px;
+    height: 56px;
+    width: 15%;
 }

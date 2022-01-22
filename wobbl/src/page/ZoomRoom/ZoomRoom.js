@@ -22,10 +22,12 @@ function ZoomRoom() {
   ]);
   return (
     <>
-      <div>Zoom room id: {roomId}</div>
+      <div className="id">Zoom room id: {roomId}</div>
+      <div className="messaging">
       <Messages chat={chat} />
       <input type="text" />
       <button>Send</button>
+      </div>
     </>
   );
 }
