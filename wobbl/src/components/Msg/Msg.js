@@ -4,10 +4,14 @@ import "./Msg.css"
 function Msg() {
   return (
     <>
-      <div>
-        Msg.name<button>up</button>
+      <div className="msg">
+        Msg
+        <div className="buttons">
+        <button>up</button>
         <button>down</button>
+        </div>
       </div>
+
     </>
   );
 }
