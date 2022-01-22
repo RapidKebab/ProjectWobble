@@ -4,7 +4,7 @@ import React, {useState, useEffect} from "react";
 import socketIOClient from "socket.io-client";
 import Header from "./components/Header/Header";
 import Home from "./page/Home/Home";
-import Ex from "./page/Ex/Ex";
+import ZoomRoom from "./page/ZoomRoom/ZoomRoom";
 
 const ENDPOINT = "http://localhost:5050";
 
@@ -32,7 +32,7 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/ex" element={<Ex />} />
+            <Route path="/zoom/:id" element={<ZoomRoom />} />
           </Routes>
         </div>
       </div>
