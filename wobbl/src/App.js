@@ -10,16 +10,20 @@ const ENDPOINT = "http://localhost:5050";
 
 function App() {
   const[response, setResponse] = useState("");
+  const socket = socketIOClient(ENDPOINT);
 
   useEffect(() => {
-    const socket = socketIOClient(ENDPOINT);
     socket.on("connectionMessage", data => {
       setResponse(data);
       console.log(data);
     });
+    socket.on("newMessage", data =>{
+      console.log(data);
+    })
+
     socket.send('hello');
   }, []);
-
+ 
 
   return (
     <BrowserRouter>
