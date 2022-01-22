@@ -1,7 +1,6 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import Messages from "../../components/Messages";
 import { useParams } from "react-router";
-import Msg from "../../components/Msg/Msg";
 import "./ZoomRoom.css";
 
 function Ex(){
@@ -9,10 +8,14 @@ function Ex(){
   const [chat, setChat] = useState([{id: 1, name: 'deez', points:1},{id: 2, name: 'nuts', points:1}])
     return (
       <>
-        <div>Zoom room id: {id}</div>
+      
+      <div className="id">Zoom room id: {id}</div>
+      <div className="messaging">
+        
         <Messages chat ={chat}/>
         <input type="text"/>
         <button>Send</button>
+      </div>
       </>
     );
 }
