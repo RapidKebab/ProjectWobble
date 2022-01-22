@@ -32,7 +32,7 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/zoom/:id" element={<ZoomRoom />} />
+            <Route path="/zoom/:id" element={<ZoomRoom/>} />
           </Routes>
         </div>
       </div>
