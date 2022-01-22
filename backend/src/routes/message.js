@@ -9,9 +9,9 @@ router
   .post(async (req, res) => {
     //TODO SEND MESSAGE and emit new message on socket
 
-    io.to("123").emit(
+    io.to(req.body.roomId).emit(
       "newMessage",
-      `test message for room with id:${req.body.room}`
+      req.body.message
     );
 
     console.log(req.body);
