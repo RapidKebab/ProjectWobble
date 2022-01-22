@@ -1,23 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Messages from "../../components/Messages";
+import socketIOClient from "socket.io-client";
 import { useParams } from "react-router";
 import "./ZoomRoom.css";
+import { socket } from "../../service/socket";
 
-function Ex(){
-  let {id} = useParams();
-  const [chat, setChat] = useState([{id: 1, name: 'deez', points:1},{id: 2, name: 'nuts', points:1}])
-    return (
-      <>
-      
-      <div className="id">Zoom room id: {id}</div>
-      <div className="messaging">
-        
-        <Messages chat ={chat}/>
-        <input type="text"/>
-        <button>Send</button>
-      </div>
-      </>
-    );
+function ZoomRoom() {
+  let { roomId } = useParams();
+
+  useEffect(() => {
+    socket.emit("joinRoom", { roomId });
+    socket.on("newMessage", (data) => {
+      console.log(data);
+    });
+    socket.send("hello");
+  });
+
+  const [chat, setChat] = useState([
+    { id: 1, name: "deez", points: 1 },
+    { id: 2, name: "nuts", points: 1 },
+  ]);
+  return (
+    <>
+      <div>Zoom room id: {roomId}</div>
+      <Messages chat={chat} />
+      <input type="text" />
+      <button>Send</button>
+    </>
+  );
 }
 
-export default Ex;
+export default ZoomRoom;

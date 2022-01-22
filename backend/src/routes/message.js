@@ -1,15 +1,21 @@
 const express = require("express");
 const router = express.Router();
 
-router.route("/").get(async (req, res)=>{
+router
+  .route("/")
+  .get(async (req, res) => {
     //TODO get cur messages, if time implement with cocroachDB
-}).post(async (req,res)=>{
+  })
+  .post(async (req, res) => {
     //TODO SEND MESSAGE and emit new message on socket
-    io.emit('newMessage', {message: req.body.message, zoomId:req.body.zoomId});
-    console.log(req.body);
-    console.log(`the message: ${req.body.message} has been emitted`);
-    res.json("succesful");
 
-});
+    io.to("123").emit(
+      "newMessage",
+      `test message for room with id:${req.body.room}`
+    );
+
+    console.log(req.body);
+    res.status(200).json("successful");
+  });
 
 module.exports = router;
