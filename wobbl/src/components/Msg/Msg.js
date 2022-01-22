@@ -7,6 +7,7 @@ function Msg() {
       <div className="msg">
         Msg
         <div className="buttons">
+        +1
         <button>up</button>
         <button>down</button>
         </div>
