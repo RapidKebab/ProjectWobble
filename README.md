@@ -7,5 +7,5 @@ Requirements to run the project:
 
 Running the project:
 ```
-docker-compose up --build
+docker-compose up
 ```
