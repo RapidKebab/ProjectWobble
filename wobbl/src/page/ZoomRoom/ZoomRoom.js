@@ -1,8 +1,7 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Messages from "../../components/Messages";
 import socketIOClient from "socket.io-client";
 import { useParams } from "react-router";
-import Msg from "../../components/Msg/Msg";
 import "./ZoomRoom.css";
 import { socket } from "../../service/socket";
 

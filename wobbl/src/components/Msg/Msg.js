@@ -1,15 +1,23 @@
 import React from "react";
 import "./Msg.css"
+import UpIcon from "../../img/uparrow.png";
+import DownIcon from "../../img/downarrow.png";
 
 function Msg() {
   return (
     <>
       <div className="msg">
-        Msg
+        {Msg.name}
         <div className="buttons">
         +1
-        <button>up</button>
-        <button>down</button>
+        <img
+        className="up"
+        src={UpIcon}
+        />
+        <img
+        className="down"
+        src={DownIcon}
+        />
         </div>
       </div>
 

@@ -1,0 +1,10 @@
+.messaging{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+.id{
+    position: absolute;
+    top: 35px;
+    width: 100%;
+}

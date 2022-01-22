@@ -3,3 +3,11 @@
 .inputText{
     
 }
+.input{
+    border: 2px solid #ffe865;
+    border-right: 0px;
+}
+.joinButton{
+    border: 2px solid #ffe865;
+    border-left: 0px;
+}
