@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import Messages from "../components/Messages";
-import Msg from "../components/Msg";
+import Messages from "../../components/Messages";
+import Msg from "../../components/Msg/Msg";
+import "./Ex.css";
 
 export default class Ex extends Component {
   constructor(props){
