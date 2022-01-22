@@ -1,7 +1,14 @@
 .Home{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 50%;
+    height: 50%;
+    border: 2px solid #ffe865;
 }
 .inputText{
-    
+    font-size:28pt;
 }
 .input{
     border: 2px solid #ffe865;

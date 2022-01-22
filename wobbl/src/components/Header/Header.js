@@ -13,7 +13,7 @@ function Header() {
           navigate("/");
         }}
       />
-      <div className="headerText">This is the HEADER</div>
+      <div className="headerText"></div>
     </div>
   );
 }
