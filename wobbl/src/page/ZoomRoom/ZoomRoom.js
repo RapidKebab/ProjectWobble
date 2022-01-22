@@ -40,12 +40,14 @@ function ZoomRoom() {
 
       <div className="messaging">
         <Messages chat={chat} />{" "}
-        <input
+        <input 
+          className="messagebox"
           type="text"
           value={input}
           onInput={(e) => setInput(e.target.value)}
         />
         <button
+          className="messagesender"
           onClick={() => {
             if (input != "") {
               sendMessage({ message:input, roomId });
