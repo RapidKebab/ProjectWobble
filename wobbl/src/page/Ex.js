@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import React, { useState } from "react";
 import Messages from "../components/Messages";
 
 export default class Ex extends Component {
   
   render() {
-    const [chat,setChat] = useState(['sample text','sample text 2'])
+    this.setState({chat: ["deez","nuts"]})
     return (
       <>
-        <Messages chat = {chat}/>
+        <Messages chat = {this.state.chat}/>
         <input type="text"/>
         <button>Send</button>
       </>
