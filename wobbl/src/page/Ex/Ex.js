@@ -13,3 +13,5 @@ function Ex(){
       </>
     );
 }
+
+export default Ex;

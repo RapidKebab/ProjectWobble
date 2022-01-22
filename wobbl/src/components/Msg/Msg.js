@@ -1,4 +1,5 @@
 import React from "react";
+import "./Msg.css"
 
 function Msg() {
   return (

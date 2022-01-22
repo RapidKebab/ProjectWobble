@@ -3,12 +3,15 @@ var app = express();
 var cors = require('cors');
 const http = require('http');
 const server = http.createServer(app);
-const io = require("socket.io")(server, {
+
+global.io = require("socket.io")(server, {
     cors: {
       origin: "http://localhost:3000",
       methods: ["GET", "POST"]
     }
   });
+app.set('socketio', io);
+
 const port = 5050;
 
 var corsOptions = {
@@ -17,11 +20,19 @@ var corsOptions = {
 }
 
 app.use(cors(corsOptions));
+app.use(express.json());
+
+
+//routes
+const messageRouter = require("./routes/message");
+//map routes
+app.use("/api/message", messageRouter);
 
 
 io.on('connection', (socket) => {
     console.log('a user connected');
-  });
+    socket.emit('connectionMessage',"Successfully connected to server");
+});
 
 app.get('/api/test', function (req, res) {
     res.send('This is a test API!');

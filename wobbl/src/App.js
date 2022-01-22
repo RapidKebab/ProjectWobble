@@ -4,7 +4,7 @@ import React, {useState, useEffect} from "react";
 import socketIOClient from "socket.io-client";
 import Header from "./components/Header/Header";
 import Home from "./page/Home/Home";
-import Ex from "./page/Ex";
+import Ex from "./page/Ex/Ex";
 
 const ENDPOINT = "http://localhost:5050";
 
@@ -13,11 +13,13 @@ function App() {
 
   useEffect(() => {
     const socket = socketIOClient(ENDPOINT);
-    socket.on("FromAPI", data => {
+    socket.on("connectionMessage", data => {
       setResponse(data);
+      console.log(data);
     });
     socket.send('hello');
   }, []);
+
 
   return (
     <BrowserRouter>
