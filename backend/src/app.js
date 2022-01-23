@@ -9,7 +9,7 @@ require("dotenv").config();
 
 global.io = require("socket.io")(server, {
     cors: {
-      origin: process.env.FRONTENDDADDRESS || "http://localhost:3000",
+      origin: process.env.FRONTENDADDRESS || "http://localhost:3000",
       methods: ["GET", "POST"]
     }
   });
@@ -51,5 +51,5 @@ app.get('/api/test', function (req, res) {
 });
 
 server.listen(port, function () {
-    console.log(`Backend server listening on port ${process.env.PORT || "5050"}`);
+    console.log(`Backend server listening on port ${process.env.PORT || "5050"} with frontend address: ${process.env.FRONTENDADDRESS || "3000"}`);
 });
