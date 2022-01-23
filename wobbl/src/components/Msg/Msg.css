@@ -4,13 +4,14 @@
     text-align: left;
     justify-content: space-between;
     align-items: center;
-    background: hsl(14, 0%, 50%);
+    background: rgb(221, 221, 221);
     width: auto;
     height: auto;
     border: 2px solid #ffe865;
     margin-left: 1%;
     margin-right: 1%;
-    margin-top: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
 }
 .msgtxt{
     font: 'Cabin';
