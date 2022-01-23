@@ -8,7 +8,8 @@ function Msg({msg}) {
   return (
     <>
       <div className="msg">
-        {msg}
+        <div className="msgtxt">{msg}</div>
+        
         <div className="buttons">
         +1
         <img
