@@ -27,19 +27,20 @@ function ZoomRoom() {
 
   useEffect(() => {
     socket.emit("joinRoom", { roomId });
-    socket.on("newMessage", (data) => {
+    socket.on("updateMessage", (data) => {
       console.log(data);
-      chat.push({message: data});
-      setChat([...chat]);
+      setChat(data.curMessages);
     });
   }, []);
+
+
 
   return (
     <>
       <div className="id">Zoom room id: {roomId}</div>
 
       <div className="messaging">
-        <Messages chat={chat} />{" "}
+        <Messages chatMessages={chat} />{" "}
         <input 
           className="messagebox"
           type="text"
@@ -47,8 +48,7 @@ function ZoomRoom() {
           onInput={(e) => setInput(e.target.value)}
           onKeyDown={(e)=>{
             //of the key pressed is enter send the message
-            if(e.code===13){
-              console.log(e);
+            if(e.key==="Enter"){
               if (input !== "") {
                 sendMessage({ message:input, roomId });
                 setInput("");
