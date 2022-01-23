@@ -8,7 +8,7 @@ function Home () {
     let navigate = useNavigate();
 
     function handleClick() {
-      console.log(process.env.BACKENDADDRESS);
+      console.log(process.env.REACT_APP_BACKENDADDRESS);
       navigate(`/zoom/${zoomId}`);
     }
 
