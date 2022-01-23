@@ -3,11 +3,12 @@ import "./Msg.css"
 import UpIcon from "../../img/uparrow.png";
 import DownIcon from "../../img/downarrow.png";
 
-function Msg() {
+function Msg({msg}) {
+  console.log(msg);
   return (
     <>
       <div className="msg">
-        {Msg.name}
+        {msg}
         <div className="buttons">
         +1
         <img

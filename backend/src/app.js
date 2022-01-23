@@ -37,12 +37,10 @@ app.use("/api/message", messageRouter);
 app.use("/api/room", roomRouter);
 
 io.on('connection', socket => {
+    socket.leave();
     console.log('a user connected');
     socket.on('joinRoom', ({ roomId }) => {
     socket.join(roomId);
-    console.log("user joined room with id"+roomId);
-    socket.emit("newMessage",`THIS IS FOR THIS SPECIFIC ROOM WITH ID:${roomId}`)
-    io.to(roomId).emit("newMessage","New user joined!");
     });
 });
 
