@@ -8,6 +8,7 @@ function Home () {
     let navigate = useNavigate();
 
     function handleClick() {
+      console.log(process.env.BACKENDADDRESS);
       navigate(`/zoom/${zoomId}`);
     }
 
