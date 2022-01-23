@@ -8,7 +8,7 @@ import ZoomRoom from "./page/ZoomRoom/ZoomRoom";
 
 function App() {
   const[response, setResponse] = useState("");
-  
+  console.log(process.env.BACKENDADDRESS);
   return (
     <BrowserRouter>
       <div className="App">
