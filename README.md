@@ -1,5 +1,5 @@
-## Wobbl
-# by Ogulcan Kaya and Pierre Masselot
+# Wobbl
+## by Ogulcan Kaya and Pierre Masselot
 McHacks 9 project done in 36 hours between the 21st and 23rd of January 2022.
 Wobbl is a chat app that brings order to the chaos of live lecture and stream chats by allowing users to vote on individual messages.
 This allows the chat to continue as normal while letting common thoughts, concerns and questions pull attention.
