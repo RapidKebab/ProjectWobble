@@ -14,7 +14,7 @@ global.io = require("socket.io")(server, {
   });
 app.set('socketio', io);
 
-const port = 5050;
+const port = process.env.PORT || 5050;
 
 var corsOptions = {
     origin: '*',
