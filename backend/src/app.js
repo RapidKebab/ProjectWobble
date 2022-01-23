@@ -4,7 +4,8 @@ var cors = require('cors');
 const http = require('http');
 const server = http.createServer(app);
 const bp = require('body-parser');
-const ENDPOINT = 
+require("dotenv").config();
+
 
 global.io = require("socket.io")(server, {
     cors: {
