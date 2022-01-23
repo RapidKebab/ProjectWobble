@@ -40,7 +40,7 @@ function ZoomRoom() {
       <div className="id">Zoom room id: {roomId}</div>
 
       <div className="messaging">
-        <Messages chatMessages={chat} />{" "}
+        <Messages chatMessages={chat} roomId={roomId} />{" "}
         <input 
           className="messagebox"
           type="text"
