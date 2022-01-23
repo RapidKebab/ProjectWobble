@@ -3,11 +3,14 @@ import Messages from "../../components/Messages";
 import { useParams } from "react-router";
 import "./ZoomRoom.css";
 import { socket } from "../../service/socket";
+const ENDPOINT = process.env.BACKENDADDRESS || "http://localhost:5050";
+
+
 
 function ZoomRoom() {
   function sendMessage({ message, roomId }) {
     console.log("sending message:" + input + " to room with id:" + roomId);
-    fetch("http://localhost:5050/api/message", {
+    fetch(ENDPOINT+"/api/message", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
