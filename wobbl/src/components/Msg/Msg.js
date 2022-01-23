@@ -9,7 +9,13 @@ function Msg({msg}) {
     <>
       <div className="msg">
         <div className="msgtxt">{msg}</div>
-        
+        <div
+        style={{
+        backgroundColor: hsl(14, var%, 50%);,
+        width: '100px',
+        height: '100px'
+        }}
+        />
         <div className="buttons">
         +1
         <img
