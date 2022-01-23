@@ -3,7 +3,7 @@ import Messages from "../../components/Messages";
 import { useParams } from "react-router";
 import "./ZoomRoom.css";
 import { socket } from "../../service/socket";
-const ENDPOINT = process.env.REACT_APP_BACKENDADDRESS || "http://localhost:5050";
+const ENDPOINT = process.env.REACT_APP_BACKEND || "http://localhost:5050";
 
 
 
