@@ -20,6 +20,5 @@ services:
       - ./wobbl:/frontdir
     environment:
       - CHOKIDAR_USEPOLLING=true
-      - REACT_APP_BACKEND=test
     ports:
       - "3000:3000"
