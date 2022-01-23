@@ -1,7 +1,19 @@
 .messaging{
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    justify-content: center;
     position: absolute;
     bottom: 10px;
     width: 100%;
+    
+}
+.inputField{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
 }
 .id{
     position: absolute;
@@ -21,3 +33,47 @@
     height: 40px;
     margin-top: 10px;
 }
+.messages{
+    
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    justify-content: space-around;
+}
+
+
+
+/* Better scroll bar from github user: derblub*/
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+  }
+  ::-webkit-scrollbar:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+  }
+  
+  ::-webkit-scrollbar-thumb:vertical {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+  }
+  ::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(0, 0, 0, 0.61);
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+  }
+  
+  ::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+  }
+  ::-webkit-scrollbar-thumb:horizontal:active {
+    background: rgba(0, 0, 0, 0.61);
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+  }
+  
