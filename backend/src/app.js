@@ -51,5 +51,5 @@ app.get('/api/test', function (req, res) {
 });
 
 server.listen(port, function () {
-    console.log('Backend server listening on port 5050');
+    console.log(`Backend server listening on port ${process.env.PORT || "5050"}`);
 });
