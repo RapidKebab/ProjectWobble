@@ -6,8 +6,6 @@ import Header from "./components/Header/Header";
 import Home from "./page/Home/Home";
 import ZoomRoom from "./page/ZoomRoom/ZoomRoom";
 
-const ENDPOINT = "http://localhost:5050";
-
 function App() {
   const[response, setResponse] = useState("");
   

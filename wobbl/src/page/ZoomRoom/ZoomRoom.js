@@ -42,6 +42,16 @@ function ZoomRoom() {
           type="text"
           value={input}
           onInput={(e) => setInput(e.target.value)}
+          onKeyDown={(e)=>{
+            //of the key pressed is enter send the message
+            if(e.code==13){
+              console.log(e);
+              if (input != "") {
+                sendMessage({ message:input, roomId });
+                setInput("");
+              }
+            }
+          }}
         />
         <button
           className="messagesender"

@@ -4,11 +4,11 @@ var cors = require('cors');
 const http = require('http');
 const server = http.createServer(app);
 const bp = require('body-parser');
-
+const ENDPOINT = 
 
 global.io = require("socket.io")(server, {
     cors: {
-      origin: "http://localhost:3000",
+      origin: process.env.FRONTENDDADDRESS || "http://localhost:3000",
       methods: ["GET", "POST"]
     }
   });
