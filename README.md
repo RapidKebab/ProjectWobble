@@ -7,7 +7,7 @@ Wobbl is a chat app that brings order to the chaos of live lecture and stream ch
 This allows the chat to continue as normal while letting common thoughts, concerns and questions pull attention.
 
 
-Accessible online [here](wobbl.netlify.app) and on [wobbl.tech](wobbl.tech)  [better link but SSL is broken and you won't see the favicon]
+Accessible online at wobbl.netlify.app and on wobbl.tech  [better link but SSL is broken and you won't see the favicon]
 
 Requirements to run the project locally: 
 * Docker(Docker desktop on Windows/Mac and docker-compose+docker on Linux)
